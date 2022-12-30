@@ -1,0 +1,29 @@
+## https://su-kun1899.hatenablog.com/entry/2017/07/10/233000
+
+# all ignore
+*
+
+# add all directory to white list
+!*/
+
+# .config
+!/.config/coc/extensions/package.json
+!/.config/starship.toml
+!/.config/wezterm/**
+
+# vim & nvim
+!/.config/nvim/**
+!/.vimrc
+
+# tmux
+!/.tmux.conf
+!/.tmux.conf.local
+
+# git
+!/.gitconfig
+!.gitignore
+
+# others
+!/README.md
+!/.zshrc
+!/install.sh

@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "coc-rust-analyzer": ">=0.64.1",
+    "coc-pairs": ">=1.4.0",
+    "coc-json": ">=1.7.0",
+    "coc-tsserver": ">=2.0.1",
+    "coc-clangd": ">=0.26.2",
+    "coc-snippets": ">=3.1.5"
+  },
+  "disabled": [],
+  "locked": []
+}

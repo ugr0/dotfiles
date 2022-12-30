@@ -1,0 +1,8 @@
+[user]
+	name = ugr0 
+	email = yujiro.takahashi0912@gmail.com
+[core]
+	quotepath = false
+	editor = nvim
+[init]
+	defaultBranch = main

@@ -1,0 +1,15 @@
+# シェルプロンプトの間に空行を挿入します。
+add_newline = true
+
+# ファイルをスキャンする際のタイムアウト時間
+scan_timeout = 10
+
+# 記号の設定
+[character]
+# old settings
+# success_symbol = "[▶](bold green)" # コマンド成功時
+# error_symbol = "[▶](bold red)"    # コマンド失敗時
+# vimcmd_symbol = "[V](bold green)"
+
+success_symbol = ""
+error_symbol = ""
