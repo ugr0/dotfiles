@@ -26,4 +26,5 @@
 # others
 !/README.md
 !/.zshrc
+!/.Brewfile
 !/install.sh
