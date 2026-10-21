@@ -55,7 +55,7 @@ mise は GUI アプリを扱えない(Homebrew Cask 相当の機能は Homebrew 
 | アプリ | バージョン | 取得元 | 補足 |
 |---|---|---|---|
 | Visual Studio Code | 1.142.0 | `update.code.visualstudio.com` の公式 zip | `code` コマンドを `~/.local/bin/code` にリンク |
-| [Ghostty](https://ghostty.org/) | 1.3.1 | ghostty.org のダウンロードページに載っている公式 dmg | ターミナル。見た目・キーは標準のまま。Quick Terminal を `Ctrl-`` ` で出し入れ |
+| [Ghostty](https://ghostty.org/) | 1.3.1 | ghostty.org のダウンロードページに載っている公式 dmg | ターミナル。見た目・キーは標準のまま。Quick Terminal を `` Ctrl-` `` で出し入れ |
 | [AltTab](https://alt-tab-macos.netlify.app/) | 11.9.2 | GitHub Releases(lwouis/alt-tab-macos)の最新 zip | Windows 風のウィンドウ切り替え。このマシンには手動で導入済み |
 | [Dia](https://www.diabrowser.com/) | — | `releases.diabrowser.com` の `Dia-latest.dmg` | ブラウザ。このマシンには手動で導入済み |
 
@@ -67,7 +67,7 @@ mise は GUI アプリを扱えない(Homebrew Cask 相当の機能は Homebrew 
 | [`config/zsh/.zprofile`](../config/zsh/.zprofile) | `~/.zprofile` | ログインシェルの PATH |
 | [`config/git/config`](../config/git/config) | `~/.config/git/config` | エディタを nvim、`main` を既定ブランチ、`pull.rebase`、ghq の root、gh を credential helper に |
 | [`config/starship/starship.toml`](../config/starship/starship.toml) | `~/.config/starship.toml` | プロンプト前の空行、Go の記号、入力位置の記号を空に(旧設定のまま) |
-| [`config/ghostty/config`](../config/ghostty/config) | `~/.config/ghostty/config` | Quick Terminal の全体ショートカット(`Ctrl-`` `)のみ。初回はアクセシビリティの許可が必要 |
+| [`config/ghostty/config`](../config/ghostty/config) | `~/.config/ghostty/config` | Quick Terminal の全体ショートカット(`` Ctrl-` ``)のみ。初回はアクセシビリティの許可が必要 |
 | [`config/git/ignore`](../config/git/ignore) | `~/.config/git/ignore` | グローバル gitignore(`.DS_Store` など) |
 | `~/.config/git/config.local` | (管理対象外) | user.name / user.email などマシン固有の設定 |
 

@@ -19,14 +19,14 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 |---|---|---|---|---|---|
 | 1 | `dot_zshrc` | `~/.zshrc` | エイリアス、履歴設定、zinit、starship、direnv、zoxide、atuin など(146 行) | 移行(取捨選択) | 済 |
 | 2 | `dot_gitconfig` | `~/.gitconfig` | 署名(GPG)、delta、diff3 など(27 行) | 移行(一部) | 済(editor のみ移行) |
-| 3 | `dot_config/mise/config.toml` | `~/.config/mise/config.toml` | python, node, go, ruby, bun, deno, uv, terraform など | 移行(取捨選択) || 済(gh のみ。他は必要になったら追加) |
-| 4 | `dot_Brewfile` / `.lock.json` | `~/.Brewfile` | Homebrew のパッケージ一覧(formula 80+、cask 8、VS Code 拡張 100+) | 不要(中身は参考にする) || 不要(Brewfile は使わない。GUI は Ghostty・AltTab・Dia を apps.sh に追加) |
+| 3 | `dot_config/mise/config.toml` | `~/.config/mise/config.toml` | python, node, go, ruby, bun, deno, uv, terraform など | 移行(取捨選択) | 済(gh のみ。他は必要になったら追加) |
+| 4 | `dot_Brewfile` / `.lock.json` | `~/.Brewfile` | Homebrew のパッケージ一覧(formula 80+、cask 8、VS Code 拡張 100+) | 不要(中身は参考にする) | 不要(Brewfile は使わない。GUI は Ghostty・AltTab・Dia を apps.sh に追加) |
 | 5 | `dot_config/starship.toml` | `~/.config/starship.toml` | プロンプト設定(18 行) | 要検討 | 移行(そのまま) |
 | 6 | `dot_config/nvim/`(archives 以外) | `~/.config/nvim/` | Neovim の設定。lazy.nvim とプラグイン 18 個 | 要検討 | |
 | 7 | `dot_config/nvim/archives/` | — | 過去の Neovim 設定 2 世代分(vimscript 版、packer 版) | 不要 | |
-| 8 | `dot_config/wezterm/wezterm.lua` | `~/.config/wezterm/` | WezTerm の見た目とキー設定(61 行) | 要検討 || 移行しない(Ghostty に乗り換え。見た目・キーは Ghostty 標準) |
-| 9 | `dot_hammerspoon/` | `~/.hammerspoon/` | Ctrl を 2 回押すと WezTerm を出し入れする | 要検討(#8 次第) || 移行しない(Ghostty の Quick Terminal で代替。`Ctrl-`` `) |
-| 10 | `dot_tmux.conf` / `.local` | `~/.tmux.conf` | gpakosz/.tmux(Oh my tmux!)の丸ごとコピーと上書き設定 | 要検討 || 移行しない(tmux は使わない) |
+| 8 | `dot_config/wezterm/wezterm.lua` | `~/.config/wezterm/` | WezTerm の見た目とキー設定(61 行) | 要検討 | 移行しない(Ghostty に乗り換え。見た目・キーは Ghostty 標準) |
+| 9 | `dot_hammerspoon/` | `~/.hammerspoon/` | Ctrl を 2 回押すと WezTerm を出し入れする | 要検討(#8 次第) | 移行しない(Ghostty の Quick Terminal で代替。`` Ctrl-` ``) |
+| 10 | `dot_tmux.conf` / `.local` | `~/.tmux.conf` | gpakosz/.tmux(Oh my tmux!)の丸ごとコピーと上書き設定 | 要検討 | 移行しない(tmux は使わない) |
 | 11 | `dot_vimrc` | `~/.vimrc` | dein.vim 時代の Vim 設定(202 行) | 不要 | |
 | 12 | `dot_ideavimrc` | `~/.ideavimrc` | JetBrains IDE の Vim 設定(`~/.vimrc` を読み込む) | 要検討 | |
 | 13 | `dot_config/chezmoi/chezmoi.toml` | — | chezmoi の設定 | 不要 | |
