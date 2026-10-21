@@ -7,10 +7,10 @@
 	root = ~/ghq
 [credential "https://github.com"]
 	helper =
-	helper = !gh auth git-credential
+	helper = !\"$HOME/.local/bin/mise\" exec -- gh auth git-credential
 [credential "https://gist.github.com"]
 	helper =
-	helper = !gh auth git-credential
+	helper = !\"$HOME/.local/bin/mise\" exec -- gh auth git-credential
 
 # Machine-specific settings (user.name / user.email etc.), not tracked
 [include]

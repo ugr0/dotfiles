@@ -13,6 +13,7 @@ exec zsh -l
 2. mise を `~/.local/bin` に導入
 3. `scripts/link.sh` で設定ファイルを `$HOME` へシンボリックリンク(既存の実ファイルは `*.backup.<日時>` に退避)
 4. `mise install` で `config/mise/config.toml` のツールを導入
+5. `scripts/apps.sh` で GUI アプリ(VS Code)を公式配布物から導入
 
 マシン固有の Git 設定は `~/.config/git/config.local` に書く(管理対象外):
 
