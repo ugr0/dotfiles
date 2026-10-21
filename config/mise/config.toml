@@ -11,6 +11,12 @@ ghq = "latest"
 fzf = "latest"
 ripgrep = "latest"
 jq = "latest"
+lsd = "latest"
+bat = "latest"
+
+# TUI
+lazygit = "latest"
+lazydocker = "latest"
 
 # Editor
 "aqua:neovim/neovim" = "latest"

@@ -20,6 +20,15 @@ zstyle ':completion:*:default' menu select=2               # select candidates w
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'        # case-insensitive
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}      # colorize candidates
 
+# Aliases
+alias vi="nvim"
+alias vim="nvim"
+alias view="nvim -R"
+alias ls="lsd"
+alias cat="bat"
+alias lg="lazygit"
+alias ld="lazydocker"
+
 # mise: activate tools from ~/.config/mise/config.toml and per-project mise.toml
 if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"

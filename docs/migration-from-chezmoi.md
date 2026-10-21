@@ -41,10 +41,10 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 | 項目 | 内容 | 推奨 | 補足 | 決定 |
 |---|---|---|---|---|
 | Amazon Q の pre/post ブロック | Amazon Q CLI の読み込み | 不要 | 使っていなければ削除 |
-| `vi`/`vim`/`view` → nvim | エイリアス | #6 次第 | Neovim を使うなら移行 |
-| `ls`→lsd、`cat`→bat、`rm`→trash-put | エイリアス | 要検討 | lsd・bat は mise で入る。trash-cli は mise に無い(macOS 標準の `trash` コマンドで代用可能か要確認) |
-| `ld`→lazydocker、`lg`→lazygit | エイリアス | 要検討 | どちらも mise(aqua)で入る |
-| `cz`→chezmoi、`pstorm` | エイリアス | 不要 / 要検討 | chezmoi は使わなくなる。PhpStorm を使うなら残す |
+| `vi`/`vim`/`view` → nvim | エイリアス | #6 次第 | Neovim を使うなら移行 | 移行済み |
+| `ls`→lsd、`cat`→bat、`rm`→trash-put | エイリアス | 要検討 | lsd・bat は mise で入る。trash-cli は mise に無い(macOS 標準の `trash` コマンドで代用可能か要確認) | ls・cat は移行済み。rm は移行しない |
+| `ld`→lazydocker、`lg`→lazygit | エイリアス | 要検討 | どちらも mise(aqua)で入る | 移行済み |
+| `cz`→chezmoi、`pstorm` | エイリアス | 不要 / 要検討 | chezmoi は使わなくなる。PhpStorm を使うなら残す | 移行しない |
 | `setopt` と履歴設定 | auto_pushd、share_history、履歴 10 万件 | **移行** | そのまま使える | 移行済み |
 | zinit + annex 4 つ | zsh プラグインマネージャ | 要検討 | 使っているのは fast-syntax-highlighting と atuin のみ。軽量な方法に置き換えも可 |
 | 補完の zstyle | 大文字小文字を無視、メニュー選択 | **移行** | そのまま使える | 移行済み(`compinit` も追加) |
@@ -52,7 +52,7 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 | starship | プロンプト | #5 次第 | mise(aqua)で入る |
 | PHP のパス | `/usr/local/opt/php@8.1` | 不要 | Intel 版 Homebrew のパス。PHP が必要なら mise で入れる |
 | zig(zvm) | `~/.zvm` | 不要 | zig も必要なら mise(core:zig)で入れる |
-| `GPG_TTY` | GPG 署名用 | #2 次第 | |
+| `GPG_TTY` | GPG 署名用 | #2 次第 | | 不要(署名しないため) |
 | `EDITOR=nvim` | | 移行 | | 移行済み |
 | direnv | | 要検討 | mise に環境変数の機能があるので不要になる可能性あり | |
 | zoxide | `z` でディレクトリ移動 | 要検討 | mise(aqua)で入る |

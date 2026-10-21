@@ -27,6 +27,10 @@ Homebrew は使っていない。「どの仕組みで入れているか」ご�
 | [fzf](https://github.com/junegunn/fzf) | 0.74.5 | aqua:junegunn/fzf | あいまい検索。`Ctrl-]` のリポジトリ移動で使用 |
 | [ripgrep](https://github.com/BurntSushi/ripgrep) | 15.2.0 | aqua:BurntSushi/ripgrep | 高速 grep(`rg`) |
 | [jq](https://jqlang.org/) | 1.8.2 | aqua:jqlang/jq | JSON 加工 |
+| [lsd](https://github.com/lsd-rs/lsd) | 1.2.0 | aqua:lsd-rs/lsd | 色・アイコン付きの ls(`ls` で呼ぶ) |
+| [bat](https://github.com/sharkdp/bat) | 0.26.1 | aqua:sharkdp/bat | ハイライト付きの cat(`cat` で呼ぶ) |
+| [lazygit](https://github.com/jesseduffield/lazygit) | 0.66.2 | aqua:jesseduffield/lazygit | ターミナルの git UI(`lg`) |
+| [lazydocker](https://github.com/jesseduffield/lazydocker) | 0.25.2 | aqua:jesseduffield/lazydocker | ターミナルの Docker UI(`ld`)。Docker 本体は未導入 |
 | [Neovim](https://neovim.io/) | 0.12.6 | aqua:neovim/neovim | エディタ。git のコミットメッセージ編集にも使う(`core.editor`) |
 
 言語ランタイム(node / python / go など)はまだ入れていない(config.toml でコメントアウト中)。
@@ -43,7 +47,7 @@ Homebrew は使っていない。「どの仕組みで入れているか」ご�
 
 | ファイル | リンク先 | 主な内容 |
 |---|---|---|
-| [`config/zsh/.zshrc`](../config/zsh/.zshrc) | `~/.zshrc` | `~/.local/bin` を PATH に追加、`EDITOR=nvim`、履歴(10 万件・タブ間で共有)、cd 履歴、補完(大文字小文字無視・メニュー選択)、`mise activate`、`Ctrl-]` で ghq + fzf のリポジトリ移動 |
+| [`config/zsh/.zshrc`](../config/zsh/.zshrc) | `~/.zshrc` | `~/.local/bin` を PATH に追加、`EDITOR=nvim`、履歴(10 万件・タブ間で共有)、cd 履歴、補完(大文字小文字無視・メニュー選択)、エイリアス(`vi`/`vim`/`view`→nvim、`ls`→lsd、`cat`→bat、`lg`、`ld`)、`mise activate`、`Ctrl-]` で ghq + fzf のリポジトリ移動 |
 | [`config/zsh/.zprofile`](../config/zsh/.zprofile) | `~/.zprofile` | ログインシェルの PATH |
 | [`config/git/config`](../config/git/config) | `~/.config/git/config` | エディタを nvim、`main` を既定ブランチ、`pull.rebase`、ghq の root、gh を credential helper に |
 | [`config/git/ignore`](../config/git/ignore) | `~/.config/git/ignore` | グローバル gitignore(`.DS_Store` など) |
