@@ -39,7 +39,8 @@ exec zsh -l   # シェルを再起動して設定を反映
 | 2 | **mise のインストール** | 下記「mise の入れ方」参照 |
 | 3 | 設定ファイルのリンク | `scripts/link.sh`。`~/.zshrc` などをこのリポジトリへのシンボリックリンクにする。既存の実ファイルは `*.backup.<日時>` に退避 |
 | 4 | CLI ツールのインストール | `mise install`。[`config/mise/config.toml`](config/mise/config.toml) に書いたツールを入れる |
-| 5 | GUI アプリのインストール | `scripts/apps.sh`。VS Code を公式配布の zip から入れる |
+| 5 | zsh プラグインのインストール | `scripts/zsh-plugins.sh`。プラグイン管理ツールは使わず git clone する(`--update` で更新) |
+| 6 | GUI アプリのインストール | `scripts/apps.sh`。VS Code を公式配布の zip から入れる |
 
 ### 4. マシン固有の Git 設定
 
@@ -81,6 +82,7 @@ mise を入れた後は、[`.zshrc`](config/zsh/.zshrc) の `eval "$(mise activa
 | CLI ツールを追加 | `mise use -g <tool>@latest`(`config/mise/config.toml` に追記される) |
 | ツールを探す | `mise registry \| grep <name>` |
 | ツールを更新 | `mise upgrade` |
+| zsh プラグインを追加・更新 | `scripts/zsh-plugins.sh` の `PLUGINS` に追記 / `scripts/zsh-plugins.sh --update` |
 | 設定ファイルを追加 | ファイルを `config/` に置き、`scripts/link.sh` に 1 行足して再実行 |
 | リポジトリへ移動 | `Ctrl-]`(ghq + fzf) |
 
@@ -91,10 +93,12 @@ mise を入れた後は、[`.zshrc`](config/zsh/.zshrc) の `eval "$(mise activa
 ├── install.sh            # セットアップの入口
 ├── scripts/
 │   ├── link.sh           # $HOME へのシンボリックリンク作成
+│   ├── zsh-plugins.sh    # zsh プラグインの取得
 │   └── apps.sh           # GUI アプリのインストール
 ├── config/               # リンク元の設定ファイル
 │   ├── zsh/              #   → ~/.zshrc, ~/.zprofile
 │   ├── git/              #   → ~/.config/git/
+│   ├── starship/         #   → ~/.config/starship.toml
 │   └── mise/             #   → ~/.config/mise/config.toml
 └── docs/                 # ドキュメント
 ```

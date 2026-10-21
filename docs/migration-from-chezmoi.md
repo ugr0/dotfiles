@@ -17,11 +17,11 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 
 | # | ファイル | 配置先 | 内容 | 推奨 | 決定 |
 |---|---|---|---|---|---|
-| 1 | `dot_zshrc` | `~/.zshrc` | エイリアス、履歴設定、zinit、starship、direnv、zoxide、atuin など(146 行) | 移行(取捨選択) | 進行中 |
+| 1 | `dot_zshrc` | `~/.zshrc` | エイリアス、履歴設定、zinit、starship、direnv、zoxide、atuin など(146 行) | 移行(取捨選択) | 済 |
 | 2 | `dot_gitconfig` | `~/.gitconfig` | 署名(GPG)、delta、diff3 など(27 行) | 移行(一部) | 済(editor のみ移行) |
 | 3 | `dot_config/mise/config.toml` | `~/.config/mise/config.toml` | python, node, go, ruby, bun, deno, uv, terraform など | 移行(取捨選択) | |
 | 4 | `dot_Brewfile` / `.lock.json` | `~/.Brewfile` | Homebrew のパッケージ一覧(formula 80+、cask 8、VS Code 拡張 100+) | 不要(中身は参考にする) | |
-| 5 | `dot_config/starship.toml` | `~/.config/starship.toml` | プロンプト設定(18 行) | 要検討 | |
+| 5 | `dot_config/starship.toml` | `~/.config/starship.toml` | プロンプト設定(18 行) | 要検討 | 移行(そのまま) |
 | 6 | `dot_config/nvim/`(archives 以外) | `~/.config/nvim/` | Neovim の設定。lazy.nvim とプラグイン 18 個 | 要検討 | |
 | 7 | `dot_config/nvim/archives/` | — | 過去の Neovim 設定 2 世代分(vimscript 版、packer 版) | 不要 | |
 | 8 | `dot_config/wezterm/wezterm.lua` | `~/.config/wezterm/` | WezTerm の見た目とキー設定(61 行) | 要検討 | |
@@ -40,25 +40,25 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 
 | 項目 | 内容 | 推奨 | 補足 | 決定 |
 |---|---|---|---|---|
-| Amazon Q の pre/post ブロック | Amazon Q CLI の読み込み | 不要 | 使っていなければ削除 |
+| Amazon Q の pre/post ブロック | Amazon Q CLI の読み込み | 不要 | 使っていなければ削除 | 移行しない |
 | `vi`/`vim`/`view` → nvim | エイリアス | #6 次第 | Neovim を使うなら移行 | 移行済み |
 | `ls`→lsd、`cat`→bat、`rm`→trash-put | エイリアス | 要検討 | lsd・bat は mise で入る。trash-cli は mise に無い(macOS 標準の `trash` コマンドで代用可能か要確認) | ls・cat は移行済み。rm は移行しない |
 | `ld`→lazydocker、`lg`→lazygit | エイリアス | 要検討 | どちらも mise(aqua)で入る | 移行済み |
 | `cz`→chezmoi、`pstorm` | エイリアス | 不要 / 要検討 | chezmoi は使わなくなる。PhpStorm を使うなら残す | 移行しない |
 | `setopt` と履歴設定 | auto_pushd、share_history、履歴 10 万件 | **移行** | そのまま使える | 移行済み |
-| zinit + annex 4 つ | zsh プラグインマネージャ | 要検討 | 使っているのは fast-syntax-highlighting と atuin のみ。軽量な方法に置き換えも可 |
+| zinit + annex 4 つ | zsh プラグインマネージャ | 要検討 | 使っているのは fast-syntax-highlighting と atuin のみ。軽量な方法に置き換えも可 | zinit は移行しない。fast-syntax-highlighting は `scripts/zsh-plugins.sh` で導入(sheldon は Homebrew の OpenSSL 依存で不可) |
 | 補完の zstyle | 大文字小文字を無視、メニュー選択 | **移行** | そのまま使える | 移行済み(`compinit` も追加) |
 | `fzf-src`(`Ctrl-]`) | ghq + fzf でリポジトリ移動 | 対応済み | 新しい `.zshrc` の `ghq-cd` を `Ctrl-]` に割り当て済み | 移行済み |
-| starship | プロンプト | #5 次第 | mise(aqua)で入る |
-| PHP のパス | `/usr/local/opt/php@8.1` | 不要 | Intel 版 Homebrew のパス。PHP が必要なら mise で入れる |
-| zig(zvm) | `~/.zvm` | 不要 | zig も必要なら mise(core:zig)で入れる |
+| starship | プロンプト | #5 次第 | mise(aqua)で入る | 移行済み |
+| PHP のパス | `/usr/local/opt/php@8.1` | 不要 | Intel 版 Homebrew のパス。PHP が必要なら mise で入れる | 移行しない |
+| zig(zvm) | `~/.zvm` | 不要 | zig も必要なら mise(core:zig)で入れる | 移行しない |
 | `GPG_TTY` | GPG 署名用 | #2 次第 | | 不要(署名しないため) |
 | `EDITOR=nvim` | | 移行 | | 移行済み |
-| direnv | | 要検討 | mise に環境変数の機能があるので不要になる可能性あり | |
-| zoxide | `z` でディレクトリ移動 | 要検討 | mise(aqua)で入る |
-| broot | `/Users/yu_takahashi/...` 固定パス | 不要 | 別マシンのユーザー名が直書きされている |
-| `source ~/.openai_key.zsh` | API キー読み込み | 不要 | 秘密情報。dotfiles には入れない |
-| atuin | 履歴検索 | 要検討 | zinit 版とインストーラ版の 2 重読み込みになっている。使うなら mise(aqua)の 1 つに統一 |
+| direnv | | 要検討 | mise に環境変数の機能があるので不要になる可能性あり | | 移行しない(必要なら mise の `[env]`) |
+| zoxide | `z` でディレクトリ移動 | 要検討 | mise(aqua)で入る | 移行しない |
+| broot | `/Users/yu_takahashi/...` 固定パス | 不要 | 別マシンのユーザー名が直書きされている | 移行しない |
+| `source ~/.openai_key.zsh` | API キー読み込み | 不要 | 秘密情報。dotfiles には入れない | 移行しない |
+| atuin | 履歴検索 | 要検討 | zinit 版とインストーラ版の 2 重読み込みになっている。使うなら mise(aqua)の 1 つに統一 | 移行済み(mise で 1 つに統一) |
 
 ### 2. `dot_gitconfig`
 

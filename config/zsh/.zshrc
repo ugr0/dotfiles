@@ -34,6 +34,10 @@ if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
 
+# Tools installed by mise (guarded so the shell still starts before `mise install`)
+command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"   # prompt
+command -v atuin    >/dev/null 2>&1 && eval "$(atuin init zsh)"      # history search (Ctrl-R, Up)
+
 # ghq + fzf: jump to a repository (Ctrl-])
 ghq-cd() {
   local dir
@@ -44,3 +48,9 @@ if [[ -o interactive ]]; then
   zle -N ghq-cd
   bindkey '^]' ghq-cd
 fi
+
+# zsh plugins cloned by scripts/zsh-plugins.sh
+# (keep last: syntax highlighting wraps widgets defined above)
+ZSH_PLUGIN_DIR="$HOME/.local/share/zsh/plugins"
+[[ -r "$ZSH_PLUGIN_DIR/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh" ]] &&
+  source "$ZSH_PLUGIN_DIR/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"

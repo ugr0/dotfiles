@@ -29,7 +29,10 @@ fi
 echo "==> Installing tools with mise"
 mise install
 
-# 5. GUI apps
+# 5. zsh plugins
+"$DOTFILES_DIR/scripts/zsh-plugins.sh"
+
+# 6. GUI apps
 "$DOTFILES_DIR/scripts/apps.sh"
 
 echo "==> Done. Restart your shell: exec zsh -l"
