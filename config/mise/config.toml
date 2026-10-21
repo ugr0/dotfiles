@@ -12,6 +12,9 @@ fzf = "latest"
 ripgrep = "latest"
 jq = "latest"
 
+# Editor
+"aqua:neovim/neovim" = "latest"
+
 # Language runtimes (uncomment as needed)
 # node = "lts"
 # python = "3.13"

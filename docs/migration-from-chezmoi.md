@@ -18,7 +18,7 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 | # | ファイル | 配置先 | 内容 | 推奨 | 決定 |
 |---|---|---|---|---|---|
 | 1 | `dot_zshrc` | `~/.zshrc` | エイリアス、履歴設定、zinit、starship、direnv、zoxide、atuin など(146 行) | 移行(取捨選択) | |
-| 2 | `dot_gitconfig` | `~/.gitconfig` | 署名(GPG)、delta、diff3 など(27 行) | 移行(一部) | |
+| 2 | `dot_gitconfig` | `~/.gitconfig` | 署名(GPG)、delta、diff3 など(27 行) | 移行(一部) | 済(editor のみ移行) |
 | 3 | `dot_config/mise/config.toml` | `~/.config/mise/config.toml` | python, node, go, ruby, bun, deno, uv, terraform など | 移行(取捨選択) | |
 | 4 | `dot_Brewfile` / `.lock.json` | `~/.Brewfile` | Homebrew のパッケージ一覧(formula 80+、cask 8、VS Code 拡張 100+) | 不要(中身は参考にする) | |
 | 5 | `dot_config/starship.toml` | `~/.config/starship.toml` | プロンプト設定(18 行) | 要検討 | |
@@ -63,15 +63,15 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 
 現在の [`config/git/config`](../config/git/config) に足すかどうかを項目ごとに決める。
 
-| 項目 | 推奨 | 補足 |
-|---|---|---|
-| `user.name` / `user.email` | 対応済み | `config.local` に設定済み |
-| GPG 署名(`signingKey`、`gpg.program=/opt/homebrew/bin/gpg`、`commit.gpgsign`) | 要検討 | gnupg は mise に無い。署名を続けるなら **SSH 鍵での署名**(`gpg.format=ssh`)に切り替えるのが Homebrew なしでは簡単 |
-| `core.quotepath = false` | **移行** | 日本語ファイル名をそのまま表示する |
-| `core.editor = nvim` | #6 次第 | VS Code にするなら `code --wait` |
-| delta(`core.pager`、`interactive.diffFilter`、`[delta]`) | 要検討 | delta は mise(aqua)で入る |
-| AWS CodeCommit の credential helper | 不要 | 全ホストに効く設定になっている。使うなら CodeCommit のホストに限定する |
-| `merge.conflictstyle = diff3`、`diff.colorMoved` | **移行** | そのまま使える(`zdiff3` も検討の余地あり) |
+| 項目 | 推奨 | 補足 | 決定 |
+|---|---|---|---|
+| `user.name` / `user.email` | 対応済み | `config.local` に設定済み | 済 |
+| GPG 署名(`signingKey`、`gpg.program=/opt/homebrew/bin/gpg`、`commit.gpgsign`) | 要検討 | gnupg は mise に無い。署名を続けるなら **SSH 鍵での署名**(`gpg.format=ssh`)に切り替えるのが Homebrew なしでは簡単 | 署名しない |
+| `core.quotepath = false` | **移行** | 日本語ファイル名をそのまま表示する | 今回は見送り |
+| `core.editor = nvim` | #6 次第 | VS Code にするなら `code --wait` | 移行(Neovim は mise で導入) |
+| delta(`core.pager`、`interactive.diffFilter`、`[delta]`) | 要検討 | delta は mise(aqua)で入る | 使わない |
+| AWS CodeCommit の credential helper | 不要 | 全ホストに効く設定になっている。使うなら CodeCommit のホストに限定する | 移行しない |
+| `merge.conflictstyle = diff3`、`diff.colorMoved` | **移行** | そのまま使える(`zdiff3` も検討の余地あり) | 今回は見送り |
 
 ### 3. `dot_config/mise/config.toml`
 

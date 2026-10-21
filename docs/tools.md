@@ -27,6 +27,7 @@ Homebrew は使っていない。「どの仕組みで入れているか」ご�
 | [fzf](https://github.com/junegunn/fzf) | 0.74.5 | aqua:junegunn/fzf | あいまい検索。`Ctrl-]` のリポジトリ移動で使用 |
 | [ripgrep](https://github.com/BurntSushi/ripgrep) | 15.2.0 | aqua:BurntSushi/ripgrep | 高速 grep(`rg`) |
 | [jq](https://jqlang.org/) | 1.8.2 | aqua:jqlang/jq | JSON 加工 |
+| [Neovim](https://neovim.io/) | 0.12.6 | aqua:neovim/neovim | エディタ。git のコミットメッセージ編集にも使う(`core.editor`) |
 
 言語ランタイム(node / python / go など)はまだ入れていない(config.toml でコメントアウト中)。
 
@@ -44,7 +45,7 @@ Homebrew は使っていない。「どの仕組みで入れているか」ご�
 |---|---|---|
 | [`config/zsh/.zshrc`](../config/zsh/.zshrc) | `~/.zshrc` | `~/.local/bin` を PATH に追加、`mise activate`、`Ctrl-]` で ghq + fzf のリポジトリ移動 |
 | [`config/zsh/.zprofile`](../config/zsh/.zprofile) | `~/.zprofile` | ログインシェルの PATH |
-| [`config/git/config`](../config/git/config) | `~/.config/git/config` | `main` を既定ブランチ、`pull.rebase`、ghq の root、gh を credential helper に |
+| [`config/git/config`](../config/git/config) | `~/.config/git/config` | エディタを nvim、`main` を既定ブランチ、`pull.rebase`、ghq の root、gh を credential helper に |
 | [`config/git/ignore`](../config/git/ignore) | `~/.config/git/ignore` | グローバル gitignore(`.DS_Store` など) |
 | `~/.config/git/config.local` | (管理対象外) | user.name / user.email などマシン固有の設定 |
 
