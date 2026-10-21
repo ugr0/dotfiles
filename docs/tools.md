@@ -50,10 +50,14 @@ Homebrew は使っていない。「どの仕組みで入れているか」ご�
 ## GUI アプリ
 
 定義: [`scripts/apps.sh`](../scripts/apps.sh)。公式配布物を取得して `/Applications` に置く。以降の更新はアプリ自身が行う。
+mise は GUI アプリを扱えない(Homebrew Cask 相当の機能は Homebrew 依存)ため、この方式にしている。
 
 | アプリ | バージョン | 取得元 | 補足 |
 |---|---|---|---|
 | Visual Studio Code | 1.142.0 | `update.code.visualstudio.com` の公式 zip | `code` コマンドを `~/.local/bin/code` にリンク |
+| [Ghostty](https://ghostty.org/) | 1.3.1 | ghostty.org のダウンロードページに載っている公式 dmg | ターミナル |
+| [AltTab](https://alt-tab-macos.netlify.app/) | 11.9.2 | GitHub Releases(lwouis/alt-tab-macos)の最新 zip | Windows 風のウィンドウ切り替え。このマシンには手動で導入済み |
+| [Dia](https://www.diabrowser.com/) | — | `releases.diabrowser.com` の `Dia-latest.dmg` | ブラウザ。このマシンには手動で導入済み |
 
 ## シェル・Git の設定
 

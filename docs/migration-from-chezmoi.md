@@ -20,7 +20,7 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 | 1 | `dot_zshrc` | `~/.zshrc` | エイリアス、履歴設定、zinit、starship、direnv、zoxide、atuin など(146 行) | 移行(取捨選択) | 済 |
 | 2 | `dot_gitconfig` | `~/.gitconfig` | 署名(GPG)、delta、diff3 など(27 行) | 移行(一部) | 済(editor のみ移行) |
 | 3 | `dot_config/mise/config.toml` | `~/.config/mise/config.toml` | python, node, go, ruby, bun, deno, uv, terraform など | 移行(取捨選択) || 済(gh のみ。他は必要になったら追加) |
-| 4 | `dot_Brewfile` / `.lock.json` | `~/.Brewfile` | Homebrew のパッケージ一覧(formula 80+、cask 8、VS Code 拡張 100+) | 不要(中身は参考にする) | |
+| 4 | `dot_Brewfile` / `.lock.json` | `~/.Brewfile` | Homebrew のパッケージ一覧(formula 80+、cask 8、VS Code 拡張 100+) | 不要(中身は参考にする) || 不要(Brewfile は使わない。GUI は Ghostty・AltTab・Dia を apps.sh に追加) |
 | 5 | `dot_config/starship.toml` | `~/.config/starship.toml` | プロンプト設定(18 行) | 要検討 | 移行(そのまま) |
 | 6 | `dot_config/nvim/`(archives 以外) | `~/.config/nvim/` | Neovim の設定。lazy.nvim とプラグイン 18 個 | 要検討 | |
 | 7 | `dot_config/nvim/archives/` | — | 過去の Neovim 設定 2 世代分(vimscript 版、packer 版) | 不要 | |
@@ -92,6 +92,8 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 ### 4. `dot_Brewfile`
 
 Homebrew は使わないのでファイル自体は不要。中身のうち使うものだけを mise や apps.sh に移す。
+
+**決定(2026-10-21)**: Brewfile は使わない。CLI・VS Code 拡張は必要になったら追加する。GUI アプリは Ghostty・AltTab・Dia を `scripts/apps.sh` に追加した(cask にあった wezterm 等は見送り)。
 
 **CLI(formula)** — mise の registry にあるか確認済み。
 

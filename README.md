@@ -40,7 +40,7 @@ exec zsh -l   # シェルを再起動して設定を反映
 | 3 | 設定ファイルのリンク | `scripts/link.sh`。`~/.zshrc` などをこのリポジトリへのシンボリックリンクにする。既存の実ファイルは `*.backup.<日時>` に退避 |
 | 4 | CLI ツールのインストール | `mise install`。[`config/mise/config.toml`](config/mise/config.toml) に書いたツールを入れる |
 | 5 | zsh プラグインのインストール | `scripts/zsh-plugins.sh`。プラグイン管理ツールは使わず git clone する(`--update` で更新) |
-| 6 | GUI アプリのインストール | `scripts/apps.sh`。VS Code を公式配布の zip から入れる |
+| 6 | GUI アプリのインストール | `scripts/apps.sh`。VS Code・Ghostty・AltTab・Dia を公式配布物(zip / dmg)から入れる |
 
 ### 4. マシン固有の Git 設定
 
