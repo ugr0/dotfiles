@@ -43,7 +43,7 @@ Homebrew は使っていない。「どの仕組みで入れているか」ご�
 
 | ファイル | リンク先 | 主な内容 |
 |---|---|---|
-| [`config/zsh/.zshrc`](../config/zsh/.zshrc) | `~/.zshrc` | `~/.local/bin` を PATH に追加、`mise activate`、`Ctrl-]` で ghq + fzf のリポジトリ移動 |
+| [`config/zsh/.zshrc`](../config/zsh/.zshrc) | `~/.zshrc` | `~/.local/bin` を PATH に追加、`EDITOR=nvim`、履歴(10 万件・タブ間で共有)、cd 履歴、補完(大文字小文字無視・メニュー選択)、`mise activate`、`Ctrl-]` で ghq + fzf のリポジトリ移動 |
 | [`config/zsh/.zprofile`](../config/zsh/.zprofile) | `~/.zprofile` | ログインシェルの PATH |
 | [`config/git/config`](../config/git/config) | `~/.config/git/config` | エディタを nvim、`main` を既定ブランチ、`pull.rebase`、ghq の root、gh を credential helper に |
 | [`config/git/ignore`](../config/git/ignore) | `~/.config/git/ignore` | グローバル gitignore(`.DS_Store` など) |
