@@ -1,0 +1,17 @@
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[ghq]
+	# Repositories are cloned to ~/ghq/<host>/<owner>/<repo>
+	root = ~/ghq
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !gh auth git-credential
+
+# Machine-specific settings (user.name / user.email etc.), not tracked
+[include]
+	path = ~/.config/git/config.local

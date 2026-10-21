@@ -1,0 +1,18 @@
+# Global tools managed by mise (replaces Homebrew formulae).
+# Short names resolve via the mise registry, which prefers the aqua backend.
+# Search: `mise registry | grep <name>` / Add: `mise use -g <name>@latest`
+
+[tools]
+# GitHub / repository management
+gh = "latest"
+ghq = "latest"
+
+# CLI utilities
+fzf = "latest"
+ripgrep = "latest"
+jq = "latest"
+
+# Language runtimes (uncomment as needed)
+# node = "lts"
+# python = "3.13"
+# go = "latest"
