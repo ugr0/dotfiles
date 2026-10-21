@@ -151,3 +151,5 @@ Homebrew は使わないのでファイル自体は不要。中身のうち使�
 6. **#5 starship** ほか残り
 
 全部の決定が埋まったら、chezmoi-dotfiles はアーカイブする。
+
+**完了(2026-10-21)**: 全 16 項目の決定が埋まり、ugr0/chezmoi-dotfiles を GitHub 上でアーカイブした。

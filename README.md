@@ -101,6 +101,7 @@ mise を入れた後は、[`.zshrc`](config/zsh/.zshrc) の `eval "$(mise activa
 │   ├── starship/         #   → ~/.config/starship.toml
 │   ├── ghostty/          #   → ~/.config/ghostty/config
 │   ├── nvim/             #   → ~/.config/nvim/
+│   ├── karabiner/        #   → ~/.config/karabiner/(ディレクトリごとリンク)
 │   └── mise/             #   → ~/.config/mise/config.toml
 └── docs/                 # ドキュメント
 ```

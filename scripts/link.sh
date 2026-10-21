@@ -25,3 +25,5 @@ link config/mise/config.toml "$HOME/.config/mise/config.toml"
 link config/starship/starship.toml "$HOME/.config/starship.toml"
 link config/ghostty/config "$HOME/.config/ghostty/config"
 link config/nvim             "$HOME/.config/nvim"
+# Karabiner rewrites karabiner.json atomically, so link the whole directory (not the file)
+link config/karabiner        "$HOME/.config/karabiner"
