@@ -19,7 +19,7 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 |---|---|---|---|---|---|
 | 1 | `dot_zshrc` | `~/.zshrc` | エイリアス、履歴設定、zinit、starship、direnv、zoxide、atuin など(146 行) | 移行(取捨選択) | 済 |
 | 2 | `dot_gitconfig` | `~/.gitconfig` | 署名(GPG)、delta、diff3 など(27 行) | 移行(一部) | 済(editor のみ移行) |
-| 3 | `dot_config/mise/config.toml` | `~/.config/mise/config.toml` | python, node, go, ruby, bun, deno, uv, terraform など | 移行(取捨選択) | |
+| 3 | `dot_config/mise/config.toml` | `~/.config/mise/config.toml` | python, node, go, ruby, bun, deno, uv, terraform など | 移行(取捨選択) || 済(gh のみ。他は必要になったら追加) |
 | 4 | `dot_Brewfile` / `.lock.json` | `~/.Brewfile` | Homebrew のパッケージ一覧(formula 80+、cask 8、VS Code 拡張 100+) | 不要(中身は参考にする) | |
 | 5 | `dot_config/starship.toml` | `~/.config/starship.toml` | プロンプト設定(18 行) | 要検討 | 移行(そのまま) |
 | 6 | `dot_config/nvim/`(archives 以外) | `~/.config/nvim/` | Neovim の設定。lazy.nvim とプラグイン 18 個 | 要検討 | |
@@ -76,18 +76,18 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 
 ### 3. `dot_config/mise/config.toml`
 
-| ツール | 旧指定 | 推奨 | 補足 |
-|---|---|---|---|
-| gh | latest | 対応済み | |
-| python | 3.11 | 要検討 | 使うなら新しいバージョンで |
-| node | 22 | 要検討 | |
-| go | 1.21 | 要検討 | 古い。使うなら latest |
-| ruby | 3.3 | 要検討 | |
-| bun / deno | latest | 要検討 | |
-| uv | latest | 要検討 | python を使うならおすすめ |
-| terraform | latest | 要検討 | |
-| saml2aws | latest | 要検討 | 仕事で AWS を使うなら |
-| serverless | 3 | 要検討 | npm 経由。v3 は古い |
+| ツール | 旧指定 | 推奨 | 補足 | 決定 |
+|---|---|---|---|---|
+| gh | latest | 対応済み | | 移行済み |
+| python | 3.11 | 要検討 | 使うなら新しいバージョンで | 見送り(必要になったら追加) |
+| node | 22 | 要検討 | | 見送り(必要になったら追加) |
+| go | 1.21 | 要検討 | 古い。使うなら latest | 見送り(必要になったら追加) |
+| ruby | 3.3 | 要検討 | | 見送り(必要になったら追加) |
+| bun / deno | latest | 要検討 | | 見送り(必要になったら追加) |
+| uv | latest | 要検討 | python を使うならおすすめ | 見送り(必要になったら追加) |
+| terraform | latest | 要検討 | | 見送り(必要になったら追加) |
+| saml2aws | latest | 要検討 | 仕事で AWS を使うなら | 見送り(必要になったら追加) |
+| serverless | 3 | 要検討 | npm 経由。v3 は古い | 見送り(必要になったら追加) |
 
 ### 4. `dot_Brewfile`
 
