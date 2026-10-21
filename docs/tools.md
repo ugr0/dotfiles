@@ -24,7 +24,7 @@ Homebrew は使っていない。「どの仕組みで入れているか」ご�
 |---|---|---|---|
 | [gh](https://cli.github.com/) | 2.102.0 | aqua:cli/cli | GitHub CLI。git の認証もこれで行う |
 | [ghq](https://github.com/x-motemen/ghq) | 1.11.2 | aqua:x-motemen/ghq | リポジトリを `~/ghq/<host>/<owner>/<repo>` に整理して clone |
-| [fzf](https://github.com/junegunn/fzf) | 0.74.5 | aqua:junegunn/fzf | あいまい検索。`Ctrl-G` のリポジトリ移動で使用 |
+| [fzf](https://github.com/junegunn/fzf) | 0.74.5 | aqua:junegunn/fzf | あいまい検索。`Ctrl-]` のリポジトリ移動で使用 |
 | [ripgrep](https://github.com/BurntSushi/ripgrep) | 15.2.0 | aqua:BurntSushi/ripgrep | 高速 grep(`rg`) |
 | [jq](https://jqlang.org/) | 1.8.2 | aqua:jqlang/jq | JSON 加工 |
 
@@ -42,7 +42,7 @@ Homebrew は使っていない。「どの仕組みで入れているか」ご�
 
 | ファイル | リンク先 | 主な内容 |
 |---|---|---|
-| [`config/zsh/.zshrc`](../config/zsh/.zshrc) | `~/.zshrc` | `~/.local/bin` を PATH に追加、`mise activate`、`Ctrl-G` で ghq + fzf のリポジトリ移動 |
+| [`config/zsh/.zshrc`](../config/zsh/.zshrc) | `~/.zshrc` | `~/.local/bin` を PATH に追加、`mise activate`、`Ctrl-]` で ghq + fzf のリポジトリ移動 |
 | [`config/zsh/.zprofile`](../config/zsh/.zprofile) | `~/.zprofile` | ログインシェルの PATH |
 | [`config/git/config`](../config/git/config) | `~/.config/git/config` | `main` を既定ブランチ、`pull.rebase`、ghq の root、gh を credential helper に |
 | [`config/git/ignore`](../config/git/ignore) | `~/.config/git/ignore` | グローバル gitignore(`.DS_Store` など) |

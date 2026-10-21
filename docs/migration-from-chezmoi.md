@@ -48,7 +48,7 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 | `setopt` と履歴設定 | auto_pushd、share_history、履歴 10 万件 | **移行** | そのまま使える |
 | zinit + annex 4 つ | zsh プラグインマネージャ | 要検討 | 使っているのは fast-syntax-highlighting と atuin のみ。軽量な方法に置き換えも可 |
 | 補完の zstyle | 大文字小文字を無視、メニュー選択 | **移行** | そのまま使える |
-| `fzf-src`(`Ctrl-]`) | ghq + fzf でリポジトリ移動 | 統合 | 現在の `Ctrl-G` と同じ機能。キーをどちらにするか決める |
+| `fzf-src`(`Ctrl-]`) | ghq + fzf でリポジトリ移動 | 対応済み | 新しい `.zshrc` の `ghq-cd` を `Ctrl-]` に割り当て済み |
 | starship | プロンプト | #5 次第 | mise(aqua)で入る |
 | PHP のパス | `/usr/local/opt/php@8.1` | 不要 | Intel 版 Homebrew のパス。PHP が必要なら mise で入れる |
 | zig(zvm) | `~/.zvm` | 不要 | zig も必要なら mise(core:zig)で入れる |

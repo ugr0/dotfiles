@@ -82,7 +82,7 @@ mise を入れた後は、[`.zshrc`](config/zsh/.zshrc) の `eval "$(mise activa
 | ツールを探す | `mise registry \| grep <name>` |
 | ツールを更新 | `mise upgrade` |
 | 設定ファイルを追加 | ファイルを `config/` に置き、`scripts/link.sh` に 1 行足して再実行 |
-| リポジトリへ移動 | `Ctrl-G`(ghq + fzf) |
+| リポジトリへ移動 | `Ctrl-]`(ghq + fzf) |
 
 ## ディレクトリ構成
 

@@ -6,7 +6,7 @@ if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
 
-# ghq + fzf: jump to a repository (Ctrl-G)
+# ghq + fzf: jump to a repository (Ctrl-])
 ghq-cd() {
   local dir
   dir="$(ghq list --full-path | fzf --prompt='repo> ')" || return
@@ -14,5 +14,5 @@ ghq-cd() {
 }
 if [[ -o interactive ]]; then
   zle -N ghq-cd
-  bindkey '^G' ghq-cd
+  bindkey '^]' ghq-cd
 fi
