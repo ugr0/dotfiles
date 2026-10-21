@@ -99,6 +99,7 @@ mise を入れた後は、[`.zshrc`](config/zsh/.zshrc) の `eval "$(mise activa
 │   ├── zsh/              #   → ~/.zshrc, ~/.zprofile
 │   ├── git/              #   → ~/.config/git/
 │   ├── starship/         #   → ~/.config/starship.toml
+│   ├── ghostty/          #   → ~/.config/ghostty/config
 │   └── mise/             #   → ~/.config/mise/config.toml
 └── docs/                 # ドキュメント
 ```
