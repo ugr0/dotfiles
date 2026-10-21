@@ -68,6 +68,7 @@ mise は GUI アプリを扱えない(Homebrew Cask 相当の機能は Homebrew 
 | [`config/git/config`](../config/git/config) | `~/.config/git/config` | エディタを nvim、`main` を既定ブランチ、`pull.rebase`、ghq の root、gh を credential helper に |
 | [`config/starship/starship.toml`](../config/starship/starship.toml) | `~/.config/starship.toml` | プロンプト前の空行、Go の記号、入力位置の記号を空に(旧設定のまま) |
 | [`config/ghostty/config`](../config/ghostty/config) | `~/.config/ghostty/config` | Quick Terminal の全体ショートカット(`` Ctrl-` ``)のみ。初回はアクセシビリティの許可が必要 |
+| [`config/nvim/`](../config/nvim/) | `~/.config/nvim` | 旧設定の options・keymaps のみ(プラグインなし)。leader は `\` |
 | [`config/git/ignore`](../config/git/ignore) | `~/.config/git/ignore` | グローバル gitignore(`.DS_Store` など) |
 | `~/.config/git/config.local` | (管理対象外) | user.name / user.email などマシン固有の設定 |
 

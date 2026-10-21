@@ -22,17 +22,17 @@ chezmoi はファイル名の `dot_` を `.` に読み替えて `$HOME` に配�
 | 3 | `dot_config/mise/config.toml` | `~/.config/mise/config.toml` | python, node, go, ruby, bun, deno, uv, terraform など | 移行(取捨選択) | 済(gh のみ。他は必要になったら追加) |
 | 4 | `dot_Brewfile` / `.lock.json` | `~/.Brewfile` | Homebrew のパッケージ一覧(formula 80+、cask 8、VS Code 拡張 100+) | 不要(中身は参考にする) | 不要(Brewfile は使わない。GUI は Ghostty・AltTab・Dia を apps.sh に追加) |
 | 5 | `dot_config/starship.toml` | `~/.config/starship.toml` | プロンプト設定(18 行) | 要検討 | 移行(そのまま) |
-| 6 | `dot_config/nvim/`(archives 以外) | `~/.config/nvim/` | Neovim の設定。lazy.nvim とプラグイン 18 個 | 要検討 | |
-| 7 | `dot_config/nvim/archives/` | — | 過去の Neovim 設定 2 世代分(vimscript 版、packer 版) | 不要 | |
+| 6 | `dot_config/nvim/`(archives 以外) | `~/.config/nvim/` | Neovim の設定。lazy.nvim とプラグイン 18 個 | 要検討 | 基本設定(options・keymaps)のみ移行。プラグインは必要になったら追加 |
+| 7 | `dot_config/nvim/archives/` | — | 過去の Neovim 設定 2 世代分(vimscript 版、packer 版) | 不要 | 移行しない |
 | 8 | `dot_config/wezterm/wezterm.lua` | `~/.config/wezterm/` | WezTerm の見た目とキー設定(61 行) | 要検討 | 移行しない(Ghostty に乗り換え。見た目・キーは Ghostty 標準) |
 | 9 | `dot_hammerspoon/` | `~/.hammerspoon/` | Ctrl を 2 回押すと WezTerm を出し入れする | 要検討(#8 次第) | 移行しない(Ghostty の Quick Terminal で代替。`` Ctrl-` ``) |
 | 10 | `dot_tmux.conf` / `.local` | `~/.tmux.conf` | gpakosz/.tmux(Oh my tmux!)の丸ごとコピーと上書き設定 | 要検討 | 移行しない(tmux は使わない) |
-| 11 | `dot_vimrc` | `~/.vimrc` | dein.vim 時代の Vim 設定(202 行) | 不要 | |
-| 12 | `dot_ideavimrc` | `~/.ideavimrc` | JetBrains IDE の Vim 設定(`~/.vimrc` を読み込む) | 要検討 | |
-| 13 | `dot_config/chezmoi/chezmoi.toml` | — | chezmoi の設定 | 不要 | |
-| 14 | `.chezmoiignore` | — | chezmoi の設定 | 不要 | |
-| 15 | `.github/workflows/test.yml` | — | chezmoi で apply できるかの CI | 不要(作り直すなら別途) | |
-| 16 | `README.md` / `LICENSE` | — | chezmoi 用の説明 | 不要 | |
+| 11 | `dot_vimrc` | `~/.vimrc` | dein.vim 時代の Vim 設定(202 行) | 不要 | 移行しない |
+| 12 | `dot_ideavimrc` | `~/.ideavimrc` | JetBrains IDE の Vim 設定(`~/.vimrc` を読み込む) | 要検討 | 移行しない(JetBrains IDE 未使用) |
+| 13 | `dot_config/chezmoi/chezmoi.toml` | — | chezmoi の設定 | 不要 | 移行しない |
+| 14 | `.chezmoiignore` | — | chezmoi の設定 | 不要 | 移行しない |
+| 15 | `.github/workflows/test.yml` | — | chezmoi で apply できるかの CI | 不要(作り直すなら別途) | 移行しない |
+| 16 | `README.md` / `LICENSE` | — | chezmoi 用の説明 | 不要 | 移行しない |
 
 ## 詳細
 
@@ -124,6 +124,8 @@ Homebrew は使わないのでファイル自体は不要。中身のうち使�
 - プラグイン: nvim-cmp、nvim-lspconfig、treesitter、telescope、nvim-tree、gitsigns、neogit、octo、lualine、barbar、noice、which-key、toggleterm、Comment、autopairs、indent-blankline、onenord(テーマ)、ChatGPT.nvim
 - 注意: ChatGPT.nvim は OpenAI の API キーが必要。lspconfig の書き方は Neovim 0.11 以降で変わっているので、持ってくるなら見直しが必要
 - `dot_editorconfig`、`dot_vscode/settings.json`、`stylua.toml` は nvim 設定を編集するための補助ファイル
+
+**決定(2026-10-21)**: `options.lua` と `keymaps.lua`(barbar 用のキーを除く)だけを [`config/nvim/`](../config/nvim/) に移行。`base.lua` は `init.lua` に統合し、全 autocmd を消してしまう `autocmd!` は外した。lazy.nvim・プラグイン・補助ファイルは移行しない。
 
 ### 8. `dot_config/wezterm/wezterm.lua`
 
